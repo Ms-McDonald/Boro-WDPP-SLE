@@ -709,6 +709,12 @@ input[type="time"],
 input[type="datetime-local"],
 input[type="month"] {
   -webkit-appearance: listbox;
+  color: #AAAAAA;
+  border-color: #AAAAAA;
+  border-radius: 5px;
+  border-style: solid;
+  padding: 2px;
+  margin: 0;
 }
 
 textarea {
@@ -11503,12 +11509,9 @@ fieldset[disabled] .form-group.is-focused .form-check .form-check-label {
 }
 
 .form-check .form-check-input {
-  opacity: 0;
+  opacity: 1;
   position: absolute;
   margin: 0;
-  z-index: -1;
-  width: 0;
-  height: 0;
   overflow: hidden;
   left: 0;
   pointer-events: none;
@@ -11713,9 +11716,7 @@ fieldset[disabled] .form-group.is-focused .form-check .form-check-label {
 }
 
 .form-check .form-check-input {
-  opacity: 0;
-  height: 0;
-  width: 0;
+  opacity: 1;
   overflow: hidden;
 }
 
@@ -19766,5 +19767,30 @@ Copyright (c) 2015 Daniel Eden
 /*# sourceMappingURL=dashboard-free.css.map */
 
 #entry-footer, #super-footer, #lead-footer {
+  display: none;
+}
+
+/* TOOL TIP FOR SLIDER */
+/* .tooltip - background of tooltip */
+#js  .tooltip-inner {
+  background-color: #fafafa;
+  border-radius: 15px;
+  color: #ccc;
+  margin-left: -3.5px;
+  box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3);
+}
+
+#js .slider-handle {
+  background: #fafafa;
+  width: 16px;
+  height: 16px;
+  box-shadow: 1px 2px 3px rgba(0, 0, 0, 0.3), 0px 0px 1px rgba(13, 13, 13, 0.3);
+  border: 1px solid rgba(0, 0, 0, 0);
+}
+
+/* This sets the color of the arrow that connects the tooltip to the handle */
+#js .tooltip-arrow {
+  border-top-color: #fafafa;
+  margin-left: -7px;
   display: none;
 }

@@ -77,10 +77,10 @@
               <div class="card">
                 <div class="card-header card-header-primary">
                   <h4 class="card-title">Online Application</h4>
-                  <p class="card-category">Complete the application in its entirety</p>
+                  <p class="card-category">Applicant Information</p>
                 </div>
                 <div class="card-body">
-                  <form>
+                  <form id="app-page1" hidden>
                     <div class="row">
                       <div class="col-md-4">
                         <div class="form-group">
@@ -123,9 +123,15 @@
                       </div>
                     </div>
                     <div class="row">
-                      <div class="col-md-12">
+                      <div class="col-md-4">
                         <div class="form-group">
-                          <label class="bmd-label-floating">Adress</label>
+                          <label class="bmd-lable-floating">Date of Birth</label>
+                          <input type="date">
+                        </div>
+                      </div>
+                      <div class="col-md-8 mt-4">
+                        <div class="form-group">
+                          <label class="bmd-label-floating">Address</label>
                           <input type="text" class="form-control">
                         </div>
                       </div>
@@ -150,7 +156,381 @@
                         </div>
                       </div>
                     </div>
-                    <button type="submit" class="btn btn-primary pull-right">Next</button>
+                    <button type="button" class="btn btn-success pull-right app-nav-btn next">Next</button>
+                    <div class="clearfix"></div>
+                  </form>
+                  <!-- APPLICATION PAGE 2 -->
+                  <form id="app-page2" hidden>
+                    <div class="row">
+                      <div class="col">
+                        <div class="form-group">
+                          <label class="bmd-label-floating">Company Name</label>
+                          <input type="text" class="form-control">
+                        </div>
+                      </div>
+                    </div>
+                    <div class="row">
+                      <div class="col-md-4 mt-4">
+                        <div class="form-group">
+                            <label class="bmd-label-floating">Job Title</label>
+                            <input type="text" class="form-control">
+                          </div>
+                      </div>
+                      <div class="col-md-4">
+                        <div class="form-group">
+                          <label class="bmd-lable-floating">Start Date</label>
+                          <input type="date">
+                        </div>
+                      </div>
+                      <div class="col-md-4">
+                        <div class="form-group">
+                          <label class="bmd-lable-floating">End Date</label>
+                          <input type="date">
+                        </div>
+                      </div>
+                    </div>
+                    <div class="row">
+                      <div class="col-md-12">
+                        <div class="form-group">
+                          <label class="bmd-label-floating">Responsibilities</label>
+                          <textarea name="responsibilities" class="form-control" rows="4" cols="50"></textarea>
+                        </div>
+                      </div>
+                    </div>
+                    <div id="add-job" class="row justify-content-center text-center my-3">
+                      <div class="col-md-6">
+                        <button id="add-experience" type="button" class="btn btn-info">
+                          <span class="material-icons pb-1">add_circle_outline</span>&nbsp;&nbsp;&nbsp;
+                          Add Another Job
+                        </button>
+                      </div>
+                    </div>
+                    <button type="button" class="btn btn-primary pull-left app-nav-btn previous">Back</button>
+                    <button type="button" class="btn btn-success pull-right app-nav-btn next">Next</button>
+                    <div class="clearfix"></div>
+                  </form>
+                  <!-- APPLICATION PAGE 3 -->
+                  <form id="app-page3" hidden>
+                    <div class="row">
+                      <div class="col-md-10">
+                        <p class="mb-0">Honors Web Design Grades</p>
+                      </div>
+                    </div>
+                    <div class="row">
+                      <div class="col-md-3">
+                        <div class="form-group">
+                          <select class="form-control drop-placeholder" id="hwd-mp1-grade">
+                            <option value="default" class="drop-placeholder" selected>MP1 Grade</option>
+                            <option value="A0">A+</option>
+                            <option value="A1">A</option>
+                           <option value="A2">A-</option>
+                           <option value="B0">B+</option>
+                           <option value="B1">B</option>
+                           <option value="B2">B-</option>
+                           <option value="C0">C+</option>
+                           <option value="C1">C</option>
+                           <option value="C2">C-</option>
+                           <option value="D0">D+</option>
+                           <option value="D1">D</option>
+                           <option value="D2">D-</option>
+                           <option value="E">E</option>
+                          </select>
+                        </div>
+                      </div>
+                      <div class="col-md-3">
+                        <div class="form-group">
+                          <select class="form-control drop-placeholder" id="hwd-mp2-grade">
+                            <option value="default" class="drop-placeholder" selected>MP2 Grade</option>
+                            <option value="A0">A+</option>
+                            <option value="A1">A</option>
+                           <option value="A2">A-</option>
+                           <option value="B0">B+</option>
+                           <option value="B1">B</option>
+                           <option value="B2">B-</option>
+                           <option value="C0">C+</option>
+                           <option value="C1">C</option>
+                           <option value="C2">C-</option>
+                           <option value="D0">D+</option>
+                           <option value="D1">D</option>
+                           <option value="D2">D-</option>
+                           <option value="E">E</option>
+                          </select>
+                        </div>
+                      </div>
+                      <div class="col-md-3">
+                        <div class="form-group">
+                          <select class="form-control drop-placeholder" id="hwd-mp3-grade">
+                            <option value="default" class="drop-placeholder" selected>MP3 Grade</option>
+                            <option value="A0">A+</option>
+                            <option value="A1">A</option>
+                           <option value="A2">A-</option>
+                           <option value="B0">B+</option>
+                           <option value="B1">B</option>
+                           <option value="B2">B-</option>
+                           <option value="C0">C+</option>
+                           <option value="C1">C</option>
+                           <option value="C2">C-</option>
+                           <option value="D0">D+</option>
+                           <option value="D1">D</option>
+                           <option value="D2">D-</option>
+                           <option value="E">E</option>
+                          </select>
+                        </div>
+                      </div>
+                      <div class="col-md-3">
+                        <div class="form-group">
+                          <select class="form-control drop-placeholder" id="hwd-mp4-grade">
+                            <option value="default" class="drop-placeholder" selected>MP4 Grade</option>
+                            <option value="A0">A+</option>
+                            <option value="A1">A</option>
+                           <option value="A2">A-</option>
+                           <option value="B0">B+</option>
+                           <option value="B1">B</option>
+                           <option value="B2">B-</option>
+                           <option value="C0">C+</option>
+                           <option value="C1">C</option>
+                           <option value="C2">C-</option>
+                           <option value="D0">D+</option>
+                           <option value="D1">D</option>
+                           <option value="D2">D-</option>
+                           <option value="E">E</option>
+                          </select>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="row mt-4">
+                      <div class="col-md-10">
+                        <p class="mb-0">Honors Advanced Web Design Grades</p>
+                      </div>
+                    </div>
+                    <div class="row">
+                      <div class="col-md-3">
+                        <div class="form-group">
+                          <select class="form-control drop-placeholder" id="ahwd-mp1-grade">
+                            <option value="default" class="drop-placeholder" selected>MP1 Grade</option>
+                            <option value="A0">A+</option>
+                            <option value="A1">A</option>
+                           <option value="A2">A-</option>
+                           <option value="B0">B+</option>
+                           <option value="B1">B</option>
+                           <option value="B2">B-</option>
+                           <option value="C0">C+</option>
+                           <option value="C1">C</option>
+                           <option value="C2">C-</option>
+                           <option value="D0">D+</option>
+                           <option value="D1">D</option>
+                           <option value="D2">D-</option>
+                           <option value="E">E</option>
+                          </select>
+                        </div>
+                      </div>
+                      <div class="col-md-3">
+                        <div class="form-group">
+                          <select class="form-control drop-placeholder" id="ahwd-mp2-grade">
+                            <option value="default" class="drop-placeholder" selected>MP2 Grade</option>
+                            <option value="A0">A+</option>
+                            <option value="A1">A</option>
+                           <option value="A2">A-</option>
+                           <option value="B0">B+</option>
+                           <option value="B1">B</option>
+                           <option value="B2">B-</option>
+                           <option value="C0">C+</option>
+                           <option value="C1">C</option>
+                           <option value="C2">C-</option>
+                           <option value="D0">D+</option>
+                           <option value="D1">D</option>
+                           <option value="D2">D-</option>
+                           <option value="E">E</option>
+                          </select>
+                        </div>
+                      </div>
+                      <div class="col-md-3">
+                        <div class="form-group">
+                          <select class="form-control drop-placeholder" id="ahwd-mp3-grade">
+                            <option value="default" class="drop-placeholder" selected>MP3 Grade</option>
+                            <option value="A0">A+</option>
+                            <option value="A1">A</option>
+                           <option value="A2">A-</option>
+                           <option value="B0">B+</option>
+                           <option value="B1">B</option>
+                           <option value="B2">B-</option>
+                           <option value="C0">C+</option>
+                           <option value="C1">C</option>
+                           <option value="C2">C-</option>
+                           <option value="D0">D+</option>
+                           <option value="D1">D</option>
+                           <option value="D2">D-</option>
+                           <option value="E">E</option>
+                          </select>
+                        </div>
+                      </div>
+                      <div class="col-md-3">
+                        <div class="form-group">
+                          <select class="form-control drop-placeholder" id="ahwd-mp4-grade">
+                            <option value="default" class="drop-placeholder" selected>MP4 Grade</option>
+                            <option value="A0">A+</option>
+                            <option value="A1">A</option>
+                           <option value="A2">A-</option>
+                           <option value="B0">B+</option>
+                           <option value="B1">B</option>
+                           <option value="B2">B-</option>
+                           <option value="C0">C+</option>
+                           <option value="C1">C</option>
+                           <option value="C2">C-</option>
+                           <option value="D0">D+</option>
+                           <option value="D1">D</option>
+                           <option value="D2">D-</option>
+                           <option value="E">E</option>
+                          </select>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="row mt-3">
+                      <div class="col-md-12">
+                        <div class="form-group">
+                          <label class="bmd-label-floating">Academic Accolades</label>
+                          <textarea name="accolades" class="form-control" rows="4" cols="50"></textarea>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="row mt-3">
+                      <div class="col-md-12">
+                        <div class="form-group">
+                          <label class="bmd-label-floating">Plans for Improvement</label>
+                          <textarea name="improvement" class="form-control" rows="4" cols="50"></textarea>
+                        </div>
+                      </div>
+                    </div>
+                    <button type="button" class="btn btn-primary pull-left app-nav-btn previous">Back</button>
+                    <button type="button" class="btn btn-success pull-right app-nav-btn next">Next</button>
+                    <div class="clearfix"></div>
+                  </form>
+                  <!-- APPLICATION PAGE 4 -->
+                  <form id="app-page4" hidden>
+                    <div class="row mt-3">
+                      <div class="col-md-12">
+                        <div class="form-group">
+                          <label class="bmd-label-floating">Skills</label>
+                          <textarea name="skills" class="form-control" rows="4" cols="50"></textarea>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="row justify-content-center">
+                      <div class="col-md-8 text-center my-4">
+                        <h4>Rate your skills for each category below.
+                          <br>0 (not confident) and 5 (very confident).</h4>
+                      </div>
+                    </div>
+                    <div class="row mb-3">
+                      <div class="col-md-3">
+                        <label for="html" class="form-label">HTML</label>
+                        <input type="range" class="form-range" min="0" max="5" step="1" id="html">
+                      </div>
+                      <div class="col-md-3">
+                        <label for="css" class="form-label">CSS</label>
+                        <input type="range" class="form-range" min="0" max="5" step="1" id="css">
+                      </div>
+                      <div class="col-md-3">
+                        <label for="bootstrap" class="form-label">Bootstrap</label>
+                        <input type="range" class="form-range" min="0" max="5" step="1" id="bootstrap">
+                      </div>
+                      <div class="col-md-3">
+                        <label for="js" class="form-label">JavaScript</label>
+                        <input type="range" class="form-range" min="0" max="5" step="1" id="js">
+                      </div>
+                    </div>
+                    <button type="button" class="btn btn-primary pull-left app-nav-btn previous">Back</button>
+                    <button type="button" class="btn btn-success pull-right app-nav-btn next">Next</button>
+                    <div class="clearfix"></div>
+                  </form>
+                  <!-- APPLICATION PAGE 5 -->
+                  <form id="app-page5" hidden>
+                    <div class="row">
+                      <div class="col-md-12">
+                        <h5>Have you ever been disciplined due to violation of the student handbook?</h5>
+                      </div>
+                      <div class="col-md-12">
+                        <div class="form-check">
+                          <input class="form-check-input" type="radio" name="disciplineRadios" id="disciplineRadios1" value="Yes">
+                          <label class="form-check-label" for="disciplineRadios1">
+                            Yes
+                          </label>
+                        </div>
+                        <div class="form-check">
+                          <input class="form-check-input" type="radio" name="disciplineRadios" id="disciplineRadios2" value="No">
+                          <label class="form-check-label" for="disciplineRadios2">
+                            No
+                          </label>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="row">
+                      <div class="col-md-12">
+                        <div class="form-group">
+                          <label class="bmd-label-floating">If yes, please elaborate</label>
+                          <textarea name="responsibilities" class="form-control" rows="4" cols="50"></textarea>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="row mb-4">
+                      <div class="col-md-12">
+                        <h5>Have you ever been academic probation due to attendance?</h5>
+                      </div>
+                      <div class="col-md-12">
+                        <div class="form-check">
+                          <input class="form-check-input" type="radio" name="disciplineRadios" id="disciplineRadios1" value="Yes">
+                          <label class="form-check-label" for="disciplineRadios1">
+                            Yes
+                          </label>
+                        </div>
+                        <div class="form-check">
+                          <input class="form-check-input" type="radio" name="disciplineRadios" id="disciplineRadios2" value="No">
+                          <label class="form-check-label" for="disciplineRadios2">
+                            No
+                          </label>
+                        </div>
+                      </div>
+                    </div>
+                    <button type="button" class="btn btn-primary pull-left app-nav-btn previous">Back</button>
+                    <button type="button" class="btn btn-success pull-right app-nav-btn next">Next</button>
+                    <div class="clearfix"></div>
+                  </form>
+                  <!-- APPLICATION PAGE 6 -->
+                  <form id="app-page6" >
+                    <div class="row">
+                      <div class="col-md-12">
+                        <div class="form-group">
+                          <label class="bmd-label-floating">Job Question 1</label>
+                          <textarea name="responsibilities" class="form-control" rows="4" cols="50"></textarea>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="row">
+                      <div class="col-md-12">
+                        <div class="form-group">
+                          <label class="bmd-label-floating">Job Question 2</label>
+                          <textarea name="responsibilities" class="form-control" rows="4" cols="50"></textarea>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="row">
+                      <div class="col-md-12">
+                        <div class="form-group">
+                          <label class="bmd-label-floating">Job Question 3</label>
+                          <textarea name="responsibilities" class="form-control" rows="4" cols="50"></textarea>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="row">
+                      <div class="col-md-12">
+                        <div class="form-group">
+                          <label class="bmd-label-floating">Job Question 4</label>
+                          <textarea name="responsibilities" class="form-control" rows="4" cols="50"></textarea>
+                        </div>
+                      </div>
+                    </div>
+                    <button type="button" class="btn btn-primary pull-left app-nav-btn previous">Back</button>
+                    <button type="submit" class="btn btn-success pull-right app-nav-btn next">Submit</button>
                     <div class="clearfix"></div>
                   </form>
                 </div>
