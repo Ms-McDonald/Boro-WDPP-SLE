@@ -12,6 +12,7 @@
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/latest/css/font-awesome.min.css">
   <!-- Material Kit CSS -->
   <link href="assets/css/material-dashboard.css?v=2.1.2" rel="stylesheet" />
+  <script src="https://smtpjs.com/v3/smtp.js"></script>
 </head>
 <body class="">
   <div class="wrapper ">
@@ -58,9 +59,6 @@
       <!-- Navbar -->
       <nav class="navbar navbar-expand-lg navbar-transparent navbar-absolute fixed-top ">
         <div class="container-fluid">
-          <div class="navbar-wrapper">
-            <a class="navbar-brand" href="javascript:;">Dashboard</a>
-          </div>
           <button class="navbar-toggler" type="button" data-toggle="collapse" aria-controls="navigation-index" aria-expanded="false" aria-label="Toggle navigation">
             <span class="sr-only">Toggle navigation</span>
             <span class="navbar-toggler-icon icon-bar"></span>
@@ -80,7 +78,7 @@
                   <p class="card-category">Applicant Information</p>
                 </div>
                 <div class="card-body">
-                  <form id="app-page1" hidden>
+                  <form id="app-page1" >
                     <div class="row">
                       <div class="col-md-4">
                         <div class="form-group">
@@ -451,20 +449,26 @@
                       </div>
                       <div class="col-md-12">
                         <div class="form-check">
-                          <input class="form-check-input" type="radio" name="disciplineRadios" id="disciplineRadios1" value="Yes">
                           <label class="form-check-label" for="disciplineRadios1">
-                            Yes
+                            <input class="form-check-input" id="disciplineRadios1" type="radio" name="disciplineRadios" value="" >
+                            <span class="form-check-sign">
+                              <span class="check"></span>
+                            </span>
+                             Yes
                           </label>
                         </div>
                         <div class="form-check">
-                          <input class="form-check-input" type="radio" name="disciplineRadios" id="disciplineRadios2" value="No">
                           <label class="form-check-label" for="disciplineRadios2">
-                            No
+                            <input class="form-check-input" id="disciplineRadios2" type="radio" name="disciplineRadios" value="" >
+                            <span class="form-check-sign">
+                              <span class="check"></span>
+                            </span>
+                             No
                           </label>
                         </div>
                       </div>
                     </div>
-                    <div class="row">
+                    <div class="row mb-4">
                       <div class="col-md-12">
                         <div class="form-group">
                           <label class="bmd-label-floating">If yes, please elaborate</label>
@@ -474,19 +478,50 @@
                     </div>
                     <div class="row mb-4">
                       <div class="col-md-12">
-                        <h5>Have you ever been academic probation due to attendance?</h5>
+                        <h5>Have you ever been on an attendance contract?</h5>
                       </div>
                       <div class="col-md-12">
                         <div class="form-check">
-                          <input class="form-check-input" type="radio" name="disciplineRadios" id="disciplineRadios1" value="Yes">
-                          <label class="form-check-label" for="disciplineRadios1">
-                            Yes
+                          <label class="form-check-label" for="attendanceRadios1">
+                            <input class="form-check-input" id="attendanceRadios1" type="radio" name="attendanceRadios" value="" >
+                            <span class="form-check-sign">
+                              <span class="check"></span>
+                            </span>
+                             Yes
                           </label>
                         </div>
                         <div class="form-check">
-                          <input class="form-check-input" type="radio" name="disciplineRadios" id="disciplineRadios2" value="No">
-                          <label class="form-check-label" for="disciplineRadios2">
-                            No
+                          <label class="form-check-label" for="attendanceRadios2">
+                            <input class="form-check-input" id="attendanceRadios2" type="radio" name="attendanceRadios" value="" >
+                            <span class="form-check-sign">
+                              <span class="check"></span>
+                            </span>
+                             No
+                          </label>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="row mb-4">
+                      <div class="col-md-12">
+                        <h5>Are you available and willing to work outside of class?</h5>
+                      </div>
+                      <div class="col-md-12">
+                        <div class="form-check">
+                          <label class="form-check-label" for="overtimeRadios1">
+                            <input class="form-check-input" id="overtimeRadios1" type="radio" name="overtimeRadios" value="" >
+                            <span class="form-check-sign">
+                              <span class="check"></span>
+                            </span>
+                             Yes
+                          </label>
+                        </div>
+                        <div class="form-check">
+                          <label class="form-check-label" for="overtime2">
+                            <input class="form-check-input" id="overtime2" type="radio" name="overtimeRadios" value="" >
+                            <span class="form-check-sign">
+                              <span class="check"></span>
+                            </span>
+                             No
                           </label>
                         </div>
                       </div>
@@ -496,11 +531,11 @@
                     <div class="clearfix"></div>
                   </form>
                   <!-- APPLICATION PAGE 6 -->
-                  <form id="app-page6" >
+                  <form id="app-page6" hidden>
                     <div class="row">
                       <div class="col-md-12">
                         <div class="form-group">
-                          <label class="bmd-label-floating">Job Question 1</label>
+                          <label class="bmd-label-floating">Do you have any experience in designing or working on websites?</label>
                           <textarea name="responsibilities" class="form-control" rows="4" cols="50"></textarea>
                         </div>
                       </div>
@@ -508,7 +543,7 @@
                     <div class="row">
                       <div class="col-md-12">
                         <div class="form-group">
-                          <label class="bmd-label-floating">Job Question 2</label>
+                          <label class="bmd-label-floating">Why should we hire you for this position?</label>
                           <textarea name="responsibilities" class="form-control" rows="4" cols="50"></textarea>
                         </div>
                       </div>
@@ -516,7 +551,7 @@
                     <div class="row">
                       <div class="col-md-12">
                         <div class="form-group">
-                          <label class="bmd-label-floating">Job Question 3</label>
+                          <label class="bmd-label-floating">What past experiences do you have that can be applied to the position?</label>
                           <textarea name="responsibilities" class="form-control" rows="4" cols="50"></textarea>
                         </div>
                       </div>
@@ -524,7 +559,7 @@
                     <div class="row">
                       <div class="col-md-12">
                         <div class="form-group">
-                          <label class="bmd-label-floating">Job Question 4</label>
+                          <label class="bmd-label-floating">What kind of work do you expect to do for this postition?</label>
                           <textarea name="responsibilities" class="form-control" rows="4" cols="50"></textarea>
                         </div>
                       </div>
@@ -539,24 +574,24 @@
             <div class="col-md-4">
               <div class="card card-profile">
                 <div class="card-avatar">
-                  <a href="javascript:;">
-                    <img class="img" src="assets/img/faces/marc.jpg" />
+                  <a href="https://www.frhsdwebdesign.com">
+                    <img class="img" src="assets/img/logo.png" />
                   </a>
                 </div>
-                <div class="card-body">
-                  <h6 class="card-category text-gray">CEO / Co-Founder</h6>
-                  <h4 class="card-title">Alec Thompson</h4>
-                  <p class="card-description">
-                    Don't be scared of the truth because we need to restart the human foundation in truth And I love you like Kanye loves Kanye I love Rick Owens’ bed design but the back is...
+                <div class="card-body mt-0">
+                  <h6 class="card-category text-gray">Web Design Pathway Program</h6>
+                  <h4 class="card-title">THE BORO</h4>
+                  <p class="card-description px-2">
+                    Take the opportunity to show off your own unique personality, abilities, and interests through real-world projects
                   </p>
-                  <a href="javascript:;" class="btn btn-primary btn-round">Follow</a>
+                  <a href="https://frhsdwebdesign.com/courses.html" class="btn btn-primary btn-round">Learn More</a>
                 </div>
               </div>
             </div>
           </div>
         </div>
       </div>
-      <footer class="footer">
+      <!-- <footer class="footer">
         <div class="container-fluid">
           <div class="copyright float-right">
             &copy;
@@ -566,7 +601,7 @@
             <a href="https://www.creative-tim.com" target="_blank">Creative Tim</a>
           </div>
         </div>
-      </footer>
+      </footer> -->
     </div>
   </div>
 

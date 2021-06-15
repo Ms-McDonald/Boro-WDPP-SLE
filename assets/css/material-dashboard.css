@@ -11586,19 +11586,19 @@ fieldset[disabled] .form-group.is-focused .form-check .form-check-label {
 }
 
 .form-check .form-check-input:checked~.form-check-sign:before {
-  animation: rippleOn 500ms;
+  /* animation: rippleOn 500ms; */
 }
 
 .form-check .form-check-input:checked~.form-check-sign .check:after {
-  animation: rippleOn 500ms forwards;
+  /* animation: rippleOn 500ms forwards; */
 }
 
 .form-check .form-check-input:not(:checked)+.form-check-sign:before {
-  animation: rippleOff 500ms;
+  /* animation: rippleOff 500ms; */
 }
 
 .form-check .form-check-input:not(:checked)+.form-check-sign .check:after {
-  animation: rippleOff 500ms;
+  /* animation: rippleOff 500ms; */
 }
 
 .form-check .rtl .form-check .form-check-sign .check::before {
@@ -11718,6 +11718,7 @@ fieldset[disabled] .form-group.is-focused .form-check .form-check-label {
 .form-check .form-check-input {
   opacity: 1;
   overflow: hidden;
+  visibility: hidden;
 }
 
 .form-check .form-check-input:checked~.check,
@@ -18089,7 +18090,10 @@ html[dir="rtl"] .form-check .form-check-sign .check:before {
   border-radius: 50%;
   overflow: hidden;
   padding: 0;
-  box-shadow: 0 16px 38px -12px rgba(0, 0, 0, 0.56), 0 4px 25px 0px rgba(0, 0, 0, 0.12), 0 8px 10px -5px rgba(0, 0, 0, 0.2);
+  box-shadow:
+  0 16px 12px -12px rgba(0, 0, 0, 0.2),
+  0 4px 12px 0px rgba(0, 0, 0, 0.1),
+  0 8px 5px -5px rgba(0, 0, 0, 0.2);
 }
 
 .card-profile .card-avatar+.card-body {
@@ -19793,4 +19797,45 @@ Copyright (c) 2015 Daniel Eden
   border-top-color: #fafafa;
   margin-left: -7px;
   display: none;
+}
+
+.helpful-links-success,
+.helpful-links-primary,
+.helpful-links-danger,
+.helpful-links-warning {
+  height: 100%;
+  width: 60%;
+  font-size: 75px;
+  text-align: center;
+  border-radius: 10px;
+}
+
+.helpful-links-success a,
+.helpful-links-primary a,
+.helpful-links-danger a,
+.helpful-links-warning a {
+  color: #ffffff;
+}
+
+.helpful-links-success a:hover,
+.helpful-links-primary a:hover,
+.helpful-links-danger a:hover,
+.helpful-links-warning a:hover {
+  color: #eeeeee;
+}
+
+.helpful-links-success {
+  background: linear-gradient(60deg, #66bb6a, #43a047);
+}
+
+.helpful-links-primary {
+  background: linear-gradient(60deg, #ab47bc, #8e24aa);
+}
+
+.helpful-links-warning {
+  background: linear-gradient(60deg, #ffa726, #fb8c00);
+}
+
+.helpful-links-danger {
+  background: linear-gradient(60deg, #ef5350, #e53935);
 }
