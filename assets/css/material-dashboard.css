@@ -15587,6 +15587,14 @@ fieldset[disabled] .form-group.is-focused .togglebutton label {
   margin-top: 20px;
 }
 
+#dashboard-content {
+  min-height: 100vh;
+  margin-top: 0;
+  padding-top:20px;
+  background: url('../img/bg-logo.png') no-repeat center fixed;
+  background-size: cover;
+}
+
 .main-panel>.footer {
   border-top: 1px solid #e7e7e7;
 }
