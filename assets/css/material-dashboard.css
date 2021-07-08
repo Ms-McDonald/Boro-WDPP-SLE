@@ -19783,9 +19783,9 @@ Copyright (c) 2015 Daniel Eden
 }
 
 /* CLASSES FOR HOVER COLORS */
-.card:hover {
+.full-card-link:hover {
   box-shadow: 0 4px 7px 0 rgba(0, 0, 0, 0.4);
 }
-.card:active {
+.full-card-link:active {
   box-shadow: 0 4px 7px 0 rgba(0, 0, 0, 0.4) inset;
 }
